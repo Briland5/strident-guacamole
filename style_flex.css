@@ -1,0 +1,70 @@
+body {
+	background-color: #151515;
+	height: 100%;
+    margin: 0;
+}
+
+h1 {
+	color: white;
+	font-family: 'Josefin Slab', serif;
+	font-weight: 600; 
+}
+
+h2, p {
+	color: white;
+	font-family: 'Josefin Slab', serif;
+	font-weight: 400; 
+}
+
+#name {
+	font-size: 4em;
+	margin: 0;
+	padding: 0;
+}
+
+#title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+}
+
+#main {
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+	min-height: 100%; 
+	width: 80%;
+	padding: 20px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 1600px
+}
+
+
+#center {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+#info {
+	order: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+#img {
+	order: 2;
+    max-width: 100%;
+    height: auto;
+    box-shadow: inset 0 0 70px 70px #151515;
+    background-image: url("pcb.jpg");
+    width: 1024px;
+    height: 681px;
+}
