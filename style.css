@@ -51,7 +51,7 @@ h2 {
     
     width: 60%;
     max-width: 1020px;
-    border-right: 2px solid #141414 !important;
+    border: 2px solid #141414 !important;
 
 	-webkit-box-shadow: inset 0px 0px 100px 100px #141414;
 	-moz-box-shadow: inset 0px 0px 100px 100px #141414;
