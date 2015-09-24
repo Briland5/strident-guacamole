@@ -20,21 +20,97 @@ h2 {
 	font-size: 1.3em;
 }
 
+#info {
+	position: absolute;
+	width: 380px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+
+	animation-name: namein;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+
+@keyframes namein {
+    0% {
+    	transform: translate(-40px, -50%);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, -50%);
+    }
+}
+
+#img_div {
+
+	display: inline-block;
+ 	vertical-align: middle;
+    
+    width: 60%;
+    max-width: 1020px;
+    border-top: 2px solid #141414 !important;
+	border-bottom: 2px solid #141414 !important;
+
+	-webkit-box-shadow: inset 0px 0px 100px 100px #141414;
+	-moz-box-shadow: inset 0px 0px 100px 100px #141414;
+	box-shadow: inset 0px 0px 100px 100px #141414;
+
+	animation-name: shadowin;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+
+@keyframes shadowin {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 #name {
 	font-size: 4em;
 	margin: 0;
 	padding: 0;
 }
 
-#info {
-	width: 380px;
-	float: left;
-}
-
 #title {
 	margin: 0;
 	padding: 0;
 	font-size: 1.5em;
+}
+
+#img {
+	display: block;
+	position: relative;
+	z-index: -1;
+	width: 100%;
+
+	animation-name: imgin;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 4s;
+}
+
+@keyframes imgin {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .container {
@@ -44,6 +120,7 @@ h2 {
 	padding: 0px;
 	margin: 0;
 }
+
 .content {
 	min-height: 100%; 
 	height: 100%;
@@ -56,11 +133,25 @@ h2 {
 	max-width: 1600px
 }
 
-.center{
+.center {
 	position: absolute;
+	text-align: right;
+
+	height: 630px;
  	top: 50%;
   	transform: translateY(-50%);
   	width: 70%;
+
+  	vertical-align: middle;
+
+}
+
+.center:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
 }
 
 .footer {
@@ -70,7 +161,24 @@ h2 {
 	width: 70%;
 	height: 50px;
 	text-align: right;
+
+	animation-name: footin;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 7s;
 }
+
+@keyframes footin {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .nav {
 	vertical-align: bottom;
@@ -101,24 +209,27 @@ div.nav li {
     padding: 0;
     text-align: center;
     transition: height 1s, margin-top 1s;
+
+	animation-name: navin;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
+
+div.nav li:nth-child(1){ animation-delay: 4.5s }
+div.nav li:nth-child(2){ animation-delay: 5s }
+div.nav li:nth-child(3){ animation-delay: 5.5s }
+div.nav li:nth-child(4){ animation-delay: 6s }
+
+@keyframes navin { 
+  0% { opacity:0; transform: translateY( 40px);}
+  85% {opacity:1; transform: translateY( -10px);;}
+  100% {transform: translateY( 0px); }
+}
+
 div.nav li:hover {
     height: 80px;
     margin-top: 0px;
 }
 
-#img_div {
-    max-width: 1020px;
-    box-shadow: inset 0 0 70px 60px #141414;
-    /*background-image: url("pcb.jpg");*/
-    width: 65%;
-    border-top: 5px solid #141414 !important;
-	border-bottom: 5px solid #141414 !important;
-}
-
-#img {
-	display: block;
-	position: relative;
-	z-index: -1;
-	width: 100%;
-}
