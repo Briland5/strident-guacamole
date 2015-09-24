@@ -51,8 +51,7 @@ h2 {
     
     width: 60%;
     max-width: 1020px;
-    border-top: 2px solid #141414 !important;
-	border-bottom: 2px solid #141414 !important;
+    border-right: 2px solid #141414 !important;
 
 	-webkit-box-shadow: inset 0px 0px 100px 100px #141414;
 	-moz-box-shadow: inset 0px 0px 100px 100px #141414;
@@ -218,9 +217,9 @@ div.nav li {
 }
 
 div.nav li:nth-child(1){ animation-delay: 4.5s }
-div.nav li:nth-child(2){ animation-delay: 5s }
-div.nav li:nth-child(3){ animation-delay: 5.5s }
-div.nav li:nth-child(4){ animation-delay: 6s }
+div.nav li:nth-child(2){ animation-delay: 4.75s }
+div.nav li:nth-child(3){ animation-delay: 5s }
+div.nav li:nth-child(4){ animation-delay: 5.25s }
 
 @keyframes navin { 
   0% { opacity:0; transform: translateY( 40px);}
